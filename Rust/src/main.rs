@@ -27,19 +27,8 @@ fn main() -> std::io::Result<()> {
     // Add last elf
     elf_vector.push(elf_sum);
 
-    // Print vector
-    // for (pos, e) in elf_vector.iter().enumerate() {
-    //     println!("Elf {} Total: {}", pos + 1, e);
-    // }
-
-    // Print largest elf
-    // let max_elf_calories = elf_vector.iter().max().unwrap();
-    // let max_elf_number = elf_vector.iter().position(|elf| elf == max_elf_calories).unwrap();
-
-    // println!("Elf {}: {}", max_elf_number, max_elf_calories);
-
-    elf_vector.sort();
-    elf_vector.reverse();
+    // Sort by decreasing order
+    elf_vector.sort_by(|elf_one, elf_two| elf_two.cmp(elf_one));
 
     let mut top_three_sum = 0;
 
