@@ -30,8 +30,11 @@ fn main() -> std::io::Result<()> {
     // Sort by decreasing order
     elf_vector.sort_by(|elf_one, elf_two| elf_two.cmp(elf_one));
 
+    // Store top three elf sums
     let mut top_three_sum = 0;
 
+
+    // Print / Sum all three elf values
     for index in 0..3 {
         top_three_sum += elf_vector[index];
         println!("Elf {}: {}", index + 1, elf_vector[index]);
