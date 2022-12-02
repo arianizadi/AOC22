@@ -33,10 +33,24 @@ fn main() -> std::io::Result<()> {
     // }
 
     // Print largest elf
-    let max_elf_calories = elf_vector.iter().max().unwrap();
-    let max_elf_number = elf_vector.iter().position(|elf| elf == max_elf_calories).unwrap();
+    // let max_elf_calories = elf_vector.iter().max().unwrap();
+    // let max_elf_number = elf_vector.iter().position(|elf| elf == max_elf_calories).unwrap();
 
-    println!("Elf {}: {}", max_elf_number, max_elf_calories);
+    // println!("Elf {}: {}", max_elf_number, max_elf_calories);
+
+    elf_vector.sort();
+    elf_vector.reverse();
+
+    let mut top_three_sum = 0;
+
+    for index in 0..3 {
+        top_three_sum += elf_vector[index];
+        println!("Elf {}: {}", index + 1, elf_vector[index]);
+    }
+
+    println!("Total: {}", top_three_sum);
+
+
 
     // Return success
     Ok(())
