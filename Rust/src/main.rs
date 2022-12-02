@@ -50,8 +50,6 @@ fn main() -> std::io::Result<()> {
 
     println!("Total: {}", top_three_sum);
 
-
-
     // Return success
     Ok(())
 }
