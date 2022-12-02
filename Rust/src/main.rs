@@ -4,7 +4,7 @@ use std::io::BufReader;
 
 fn main() -> std::io::Result<()> {
     // File handler
-    let file = File::open("test-set.txt").expect("File not found.");
+    let file = File::open("real-set.txt").expect("File not found.");
     let buf_reader = BufReader::new(file);
 
     // Create vector for elves
@@ -24,10 +24,19 @@ fn main() -> std::io::Result<()> {
         }
     }
 
+    // Add last elf
+    elf_vector.push(elf_sum);
+
     // Print vector
-    println!("Elf: {:#?}", elf_vector);
+    // for (pos, e) in elf_vector.iter().enumerate() {
+    //     println!("Elf {} Total: {}", pos + 1, e);
+    // }
 
+    // Print largest elf
+    let max_elf_calories = elf_vector.iter().max().unwrap();
+    let max_elf_number = elf_vector.iter().position(|elf| elf == max_elf_calories).unwrap();
 
+    println!("Elf {}: {}", max_elf_number, max_elf_calories);
 
     // Return success
     Ok(())
