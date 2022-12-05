@@ -72,18 +72,5 @@ fn main() {
 
     println!("Part 1: {}", total);
 
-    // for (key, value) in &map {
-    //     if *value == 3 as u8 {
-    //         // println!("{} / {}", key, value);
-    //         if *key as u32 >= 97 && *key as u32 <= 122 {
-    //             total_badge += *key as u32 - 96;
-    //         } else if *key as u32 >= 65 && *key as u32 <= 90 {
-    //             total_badge += *key as u32 - 38;
-    //         } else {
-    //             println!("Error: {}", key);
-    //         }
-    //     }
-    // }
-
     println!("Part 2: {}", total_badge);
 }
