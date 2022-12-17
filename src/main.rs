@@ -36,8 +36,8 @@ fn main() -> std::io::Result<()> {
     println!("Part 1: {}", elf_vector[0]);
 
     // Sum all three elf values
-    for index in 0..3 {
-        part_two += elf_vector[index];
+    for elf in elf_vector.iter().take(3) {
+        part_two += elf;
     }
 
     println!("Part 2: {}", part_two);
