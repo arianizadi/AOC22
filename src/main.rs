@@ -52,7 +52,7 @@ fn main() {
 
         if counter == 2 {
             for (key, value) in &map {
-                if *value == 3 as u8 {
+                if *value == 3 {
                     if *key as u32 >= 97 && *key as u32 <= 122 {
                         total_badge += *key as u32 - 96;
                     } else if *key as u32 >= 65 && *key as u32 <= 90 {
