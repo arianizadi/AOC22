@@ -42,6 +42,6 @@ fn main() {
         }
     }
 
-    println!("Total Score (Part 1): {}", score_part1);
-    println!("Total Score (Part 2): {}", score_part2);
+    println!("Part 1: {}", score_part1);
+    println!("Part 2: {}", score_part2);
 }
